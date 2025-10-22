@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/scripts/index.js" defer></script>
+    <script src="/scripts/calculator.js" defer></script>
+</head>
+<body>
+   <div class="calculator-container">
+        <div class="result-display" id="display">
+            <input type="text" class="display-input" id="operation-input" placeholder="1+1"/>
+            <div class="display-switcher">
+                <button class="scientific-toggle" id="scientific-toggle">SCI</button>
+                <input type="text" class="display-input" id="operation-show" placeholder="1+1" disabled/>
+            </div>
+        </div>
+   
+        <div class="calculator-main">
+            <div class="buttons-container">
+                <!-- Botones básicos existentes -->
+                <button class="btn" id="clear">Clr</button>
+                <button class="btn" id="backspace">←</button>
+                <button class="btn operator" id="percentage">%</button>
+                <button class="btn operator" id="divide">÷</button>
+
+                <button class="btn" id="7">7</button>
+                <button class="btn" id="8">8</button>
+                <button class="btn" id="9">9</button>
+                <button class="btn operator" id="multiply">×</button>
+
+                <button class="btn" id="4">4</button>
+                <button class="btn" id="5">5</button>
+                <button class="btn" id="6">6</button>
+                <button class="btn operator" id="subtract">-</button>
+
+                <button class="btn" id="1">1</button>
+                <button class="btn" id="2">2</button>
+                <button class="btn" id="3">3</button>
+                <button class="btn operator" id="add">+</button>
+
+                <button class="btn" id="0">0</button>
+                <button class="btn" id="decimal">.</button>
+                <button class="btn equal-sign" id="equals">=</button>
+            </div>
+
+            <div class="scientific-column">
+                <button class="btn scientific" id="power">xⁿ</button>
+                <button class="btn scientific" id="sqrt">√</button>
+                <button class="btn scientific" id="sin">sin</button>
+                <button class="btn scientific" id="cos">cos</button>
+            </div>
+        </div>
+   </div>
+</body>
+</html>

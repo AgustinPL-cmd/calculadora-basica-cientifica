@@ -1,0 +1,214 @@
+:root{
+    --primary-color: #34656D;
+    --secondary-color: #334443;
+    --background-color: #FAEAB1;
+    --button-background: #D1D3D4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background-color);
+    padding: 20px;
+}
+
+.calculator-container{
+    width: 95%; 
+    height: auto; 
+    max-height: 90vh; 
+    background: var(--background-color);
+    border-radius: 15px;
+    box-shadow: 7px 7px var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    overflow: hidden;
+}
+
+.result-display{
+    width: 100%;
+    min-height: 30%;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 2rem;
+    padding: 15px;
+    color: var(--primary-color);
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+#operation-input{
+    font-size: 1em;
+    outline: none;
+    font-weight: bold;
+    text-align: right;
+    border: none;
+    background-color: var(--background-color);
+}
+
+#operation-show{
+    outline: none;
+    font-weight:normal;
+    text-align: right;
+    border: none;
+    background-color: var(--background-color);
+}
+
+.buttons-container{
+    flex: 1;
+    display: grid;
+    background-color: var(--button-background);
+    padding: 20px;
+    border-radius: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(40px, 1fr); 
+    
+}
+
+.buttons-container button{
+    border: 2px solid var(--primary-color);
+    outline: none;
+    background: var(--background-color) ;
+    color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 4px 4px var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+.buttons-container button:active{
+    box-shadow: inset 2px 2px var(--secondary-color);
+    transform: translate(4px 4px);
+}
+
+#equals{
+    grid-column: span 2;
+}
+
+.display-switcher {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.scientific-toggle {
+    background: var(--primary-color);
+    color: white;
+    border: 2px solid var(--secondary-color);
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px var(--secondary-color);
+    transition: all 0.2s ease;
+}
+
+.scientific-toggle:active {
+    box-shadow: inset 1px 1px var(--secondary-color);
+    transform: translate(2px, 2px);
+}
+
+.scientific-toggle.active {
+    background: var(--secondary-color);
+    color: var(--background-color);
+}
+
+/* Agrega esto al final de tu CSS */
+
+.calculator-main {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons-container {
+    flex: 3;
+    display: grid;
+    background-color: var(--button-background);
+    padding: 20px;
+    border-radius: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(40px, 1fr);
+}
+
+.scientific-column {
+    flex: 1;
+    display: none; 
+    background-color: var(--button-background);
+    padding: 20px;
+    border-radius: 10px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-auto-rows: minmax(40px, 1fr);
+}
+
+
+
+.btn.scientific:active {
+    box-shadow: inset 2px 2px var(--secondary-color);
+    transform: translate(4px, 4px);
+}
+
+
+.calculator-main {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons-container {
+    flex: 3;
+    display: grid;
+    background-color: var(--button-background);
+    padding: 20px;
+    border-radius: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(40px, 1fr);
+}
+
+.scientific-column {
+    flex: 1;
+    display: none; 
+    background-color: var(--button-background);
+    padding: 20px;
+    border-radius: 10px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-auto-rows: minmax(40px, 1fr);
+}
+
+.scientific-mode .scientific-column {
+    display: grid;
+}
+
+.btn.scientific {
+    border: 2px solid var(--primary-color);
+    outline: none;
+    background: var(--background-color);
+    color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 4px 4px var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+
+.btn.scientific:active {
+    box-shadow: inset 2px 2px var(--secondary-color);
+    transform: translate(4px, 4px);
+}
